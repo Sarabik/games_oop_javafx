@@ -23,7 +23,7 @@ public final class Logic {
     private boolean free(Cell[] steps) throws OccupiedCellException {
         for (Cell cell : steps) {
             for (Figure figure : figures) {
-                if (figure.position() == cell) {
+                if (figure != null && cell.equals(figure.position())) {
                     throw new OccupiedCellException("Another figure obstructs the movement");
                 }
             }

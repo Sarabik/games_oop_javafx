@@ -10,15 +10,6 @@ import static org.hamcrest.CoreMatchers.is;
 
 public class LogicTest {
 
-    @Ignore
-    @Test
-    public void whenMoveFromC1toH6ThenH6()
-            throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
-        Logic logic = new Logic();
-        logic.add(new BishopBlack(Cell.C1));
-        logic.move(Cell.C1, Cell.H6);
-    }
-
     @Test(expected = FigureNotFoundException.class)
     public void whenFigureNotFoundThenFinish()
             throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
